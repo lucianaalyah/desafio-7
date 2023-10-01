@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    
+</head>
+<body>
+
+   
+    <main>
+        <h1 id="texto">Calculadora</h1>
+        <div id="texto" class="content">
+            <input type="number" name="txt01" id="txt01" class="txt">
+            <input type="number" name="txt02" id="txt02" class="txt">
+            <input type="button" value="+" id="btnSomar" class="txt">
+            <input type="button" value="-" id="btnSubtracao" class="txt">
+            <input type="button" value="*" id="btnMultiplicacao" class="txt">
+            <input type="button" value="/" id="btnDivisao" class="txt">
+            <input type="button" value="Limpar" id="btnReset" class="">
+
+            
+            <div id="resultado">
+                Resultado
+            </div>
+        </div>
+    </main>
+
+    <script>
+        var btnSomar = document.getElementById('btnSomar');
+        btnSomar.addEventListener('click',somar);
+        function somar(){
+            var c1 = document.getElementById("txt01");
+            var c2 = document.getElementById("txt02");
+            var result = document.getElementById("resultado");
+
+            var num1 = parseFloat(c1.value);
+            var num2 = parseFloat(c2.value);
+            var resultado = num1 + num2;
+            result.innerText = "A soma é: " + resultado;
+        }
+    </script>
+    
+    <script>
+        var btnSubtracao = document.getElementById('btnSubtracao');
+        btnSubtracao.addEventListener('click',subtracao);
+        function subtracao(){
+            var c1 = document.getElementById("txt01");
+            var c2 = document.getElementById("txt02");
+            var result = document.getElementById("resultado");
+
+            var num1 = parseFloat(c1.value);
+            var num2 = parseFloat(c2.value);
+            var resultado = num1 - num2;
+            result.innerText = "A subtração é: " + resultado;
+        }
+    </script>
+    
+    <script>
+        var btnMultiplicacao = document.getElementById('btnMultiplicacao');
+        btnMultiplicacao.addEventListener('click',multiplicacao);
+        function multiplicacao(){
+            var c1 = document.getElementById("txt01");
+            var c2 = document.getElementById("txt02");
+            var result = document.getElementById("resultado");
+
+            var num1 = parseFloat(c1.value);
+            var num2 = parseFloat(c2.value);
+            var resultado = num1 * num2;
+            result.innerText = "A multiplicação é: " + resultado;
+        }
+    </script>
+    
+    <script>
+        var btnDivisao = document.getElementById('btnDivisao');
+        btnDivisao.addEventListener('click',divisao);
+        function divisao(){
+            var c1 = document.getElementById("txt01");
+            var c2 = document.getElementById("txt02");
+            var result = document.getElementById("resultado");
+
+            var num1 = parseFloat(c1.value);
+            var num2 = parseFloat(c2.value);
+            var resultado = num1 / num2;
+            result.innerText = "A divisão é: " + resultado;
+        }
+    </script>
+
+<script>
+    var btnReset = document.getElementById('btnReset');
+    btnReset.addEventListener('click',reset);
+
+    function reset() {
+        var c1 = document.getElementById("txt01");
+        var c2 = document.getElementById("txt02");
+        var result = document.getElementById("resultado");
+
+        c1.value = "";
+        c2.value = "";
+        result.innerText = "Resultado";
+    }
+</script>
+
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: cursive;
+        }
+
+        #imagem {
+        height: 500px;
+        width: 100%;
+        position: relative;
+        background-size:cover;
+        background-repeat: no-repeat;
+        }
+        
+        #texto {
+        text-align: center;
+        font-size: 20px;
+        font-family: cursive;
+        text-shadow: white 0px 0px 8px;
+        color: blue;
+        }
+       
+ 
+        header {
+            text-align: center;
+            justify-content: center;
+        }
+  
+       
+  
+    </style>
+
+    <header>
+        <img id="imagem" src="Imagens/ceu.gif"/>
+    </header>
+    
+    <footer id="texto">
+        ♥ Elas na Tech 2023 ♥
+    </footer>
+
+</body>
+
+</html>
